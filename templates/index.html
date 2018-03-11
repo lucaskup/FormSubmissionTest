@@ -3,6 +3,7 @@
     <head>
         <title>Teste sua Requisição HTTP</title>
         <meta charset="UTF-8">
+        <link href="static/css/main.css" rel="stylesheet">
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
     <body>
@@ -11,8 +12,14 @@
             Ao realizar requisições HTTP (GET ou POST) contra essa página,
             serão exibidos os parâmetros enviados.
         </p>
+        <p>
+            Método utilizado: <b>{{metodo}}</b>.
+        </p>
         {% if parametros|length >0 %}
         <table>
+            <caption>
+                Parâmetos da Requisição
+            </caption>
             <thead>
                 <tr>
                     <th>Nome</th>

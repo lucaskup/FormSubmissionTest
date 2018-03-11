@@ -15,7 +15,7 @@ def index():
     if request.values:
         for key, value in request.values.items():
             paramList.append((key,value))
-    return render_template('index.html',parametros = paramList)
+    return render_template('index.html', parametros = paramList, metodo = request.method)
 
 if __name__=='__main__':
     app.run(debug=True)
