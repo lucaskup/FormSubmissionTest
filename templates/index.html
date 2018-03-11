@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teste sua Requisição HTTP</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <h1>Teste de Requisições HTTP</h1>
+        <p>
+            Ao realizar requisições HTTP (GET ou POST) contra essa página,
+            serão exibidos os parâmetros enviados.
+        </p>
+        {% if parametros|length >0 %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in parametros %}
+                <tr>
+                    <td>
+                        {{key}}
+                    </td>
+                    <td>
+                        {{value}}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </body>
+</html>
