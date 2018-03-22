@@ -1,3 +1,4 @@
+
 table{
     border-collapse: collapse;
     min-width: 200px;
@@ -5,6 +6,17 @@ table{
 table, th, td{
     border: 1px solid black;
 }
-td,th{
+td, th{
     padding: 5px;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.center{
+    width: 90%;
+    margin: 30px auto;
+    text-align:right;
 }
